@@ -20,7 +20,7 @@
 
   document.querySelectorAll('.brand-mark').forEach((item) => {
     if (!item.querySelector('.brand-logo')) {
-      item.innerHTML = '<img class="brand-logo" src="assets/images/cotmac-logo-clean.png" alt="Cotmac logo" />';
+      item.innerHTML = '<img class="brand-logo" src="assets/images/cotmac-logo-square.png" alt="Cotmac logo" />';
     }
   });
 
@@ -120,8 +120,9 @@
   });
 
   document.querySelectorAll('.site-nav a').forEach((link) => {
-    link.addEventListener('click', function () {
+    link.addEventListener('click', function (event) {
       if (window.matchMedia('(max-width: 1024px)').matches) {
+        if (event.defaultPrevented) return;
         closeDropdowns();
         if (nav) nav.classList.remove('is-open');
         if (toggle) toggle.setAttribute('aria-expanded', 'false');

@@ -108,15 +108,20 @@ button { font: inherit; }
   display: flex; align-items: center; justify-content: space-between; gap: 24px;
 }
 .brand-mark {
-  display: inline-flex; align-items: center; justify-content: center; min-width: 190px;
+  display: inline-flex; align-items: center; justify-content: center;
+  width: clamp(62px, 5.6vw, 76px); min-width: 0; flex: 0 0 auto;
   border-radius: 0; overflow: visible; padding: 0; background: transparent;
   box-shadow: none;
+  transition: transform .28s var(--ease);
 }
 .brand-logo {
   display: block;
-  width: clamp(180px, 18vw, 250px);
+  width: 100%;
   height: auto;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
 }
+.brand-mark:hover { transform: translateY(-1px); }
 .site-nav { margin-left: auto; }
 .nav-list {
   list-style: none; display: flex; gap: 8px; align-items: center; margin: 0; padding: 0;
