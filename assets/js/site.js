@@ -20,7 +20,7 @@
 
   document.querySelectorAll('.brand-mark').forEach((item) => {
     if (!item.querySelector('.brand-logo')) {
-      item.innerHTML = '<img class="brand-logo" src="assets/images/cotmac-logo-header.png" alt="Cotmac logo" />';
+      item.innerHTML = '<img class="brand-logo" src="assets/images/cotmac-logo-clean.png" alt="Cotmac logo" />';
     }
   });
 
