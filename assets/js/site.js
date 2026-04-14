@@ -18,6 +18,12 @@
     header.classList.toggle('is-scrolled', window.scrollY > 24);
   }
 
+  document.querySelectorAll('.brand-mark').forEach((item) => {
+    if (!item.querySelector('.brand-logo')) {
+      item.innerHTML = '<img class="brand-logo" src="assets/images/cotmac-logo.png" alt="Cotmac logo" />';
+    }
+  });
+
   function closeDropdowns(exceptItem) {
     dropdownParents.forEach((item) => {
       if (item === exceptItem) return;
@@ -68,6 +74,16 @@
     }
 
     const button = item.querySelector('.nav-subtoggle');
+
+    link.addEventListener('click', function (event) {
+      if (!window.matchMedia('(max-width: 1024px)').matches) return;
+      if (item.classList.contains('open')) return;
+
+      event.preventDefault();
+      closeDropdowns(item);
+      item.classList.add('open');
+      button.setAttribute('aria-expanded', 'true');
+    });
 
     button.addEventListener('click', function (event) {
       event.preventDefault();

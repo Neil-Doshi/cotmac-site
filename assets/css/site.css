@@ -108,13 +108,16 @@ button { font: inherit; }
   display: flex; align-items: center; justify-content: space-between; gap: 24px;
 }
 .brand-mark {
-  display: inline-flex; align-items: stretch; min-width: 164px; border-radius: 0; overflow: hidden;
+  display: inline-flex; align-items: center; justify-content: center; min-width: 220px; min-height: 62px;
+  border-radius: 14px; overflow: hidden; padding: 0; background: rgba(255,255,255,.04);
   box-shadow: 0 10px 20px rgba(0,0,0,.08);
 }
-.brand-blue { background: #1ea6dd; color: #fff; padding: 22px 18px; font-weight: 800; letter-spacing: .03em; }
-.brand-white {
-  background: rgba(255,255,255,.96); color: var(--brand-blue-dark); padding: 10px 16px; font-size: 12px; line-height: 1.25;
-  display: flex; align-items: center; justify-content: center; text-align: center; min-width: 74px;
+.brand-logo {
+  display: block;
+  width: clamp(180px, 18vw, 240px);
+  height: 62px;
+  object-fit: cover;
+  object-position: center top;
 }
 .site-nav { margin-left: auto; }
 .nav-list {
