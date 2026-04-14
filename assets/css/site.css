@@ -108,16 +108,14 @@ button { font: inherit; }
   display: flex; align-items: center; justify-content: space-between; gap: 24px;
 }
 .brand-mark {
-  display: inline-flex; align-items: center; justify-content: center; min-width: 220px; min-height: 62px;
-  border-radius: 14px; overflow: hidden; padding: 0; background: rgba(255,255,255,.04);
-  box-shadow: 0 10px 20px rgba(0,0,0,.08);
+  display: inline-flex; align-items: center; justify-content: center; min-width: 190px;
+  border-radius: 0; overflow: visible; padding: 0; background: transparent;
+  box-shadow: none;
 }
 .brand-logo {
   display: block;
-  width: clamp(180px, 18vw, 240px);
-  height: 62px;
-  object-fit: cover;
-  object-position: center top;
+  width: clamp(180px, 18vw, 250px);
+  height: auto;
 }
 .site-nav { margin-left: auto; }
 .nav-list {
