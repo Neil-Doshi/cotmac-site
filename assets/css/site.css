@@ -109,16 +109,16 @@ button { font: inherit; }
 }
 .brand-mark {
   display: inline-flex; align-items: center; justify-content: center;
-  width: clamp(62px, 5.6vw, 76px); min-width: 0; flex: 0 0 auto;
+  min-width: 0; flex: 0 0 auto;
   border-radius: 0; overflow: visible; padding: 0; background: transparent;
   box-shadow: none;
   transition: transform .28s var(--ease);
 }
 .brand-logo {
   display: block;
-  width: 100%;
-  height: auto;
-  aspect-ratio: 1 / 1;
+  width: auto;
+  height: clamp(62px, 5.4vw, 72px);
+  max-width: min(22vw, 84px);
   object-fit: contain;
 }
 .brand-mark:hover { transform: translateY(-1px); }
